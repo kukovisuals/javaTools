@@ -1,11 +1,23 @@
 import java.io.*;
-/*
-	There are many type of file reader 
-	FileReader, BufferReader, Scanner
-*/
-class Main {
+import java.nio.file.*;
+
+public class Main {
+	/*
+		There are many type of file reader 
+		FileReader, BufferReader, Scanner
+	*/	
 	public static void main(String[] args) throws Exception {		
-		bufferR();	
+		String data = fileAsString("day3.txt");
+		System.out.println(data);
+		// bufferR();	
+	}	
+	/*
+		Reading a text file as a string
+	*/
+	public static String fileAsString(String fileName) throws Exception{
+		String data = "";
+		data = new String (Files.readAllBytes(Paths.get(fileName)));
+		return data;
 	}
 	/*
 		Each read request to be made of the underlying 
