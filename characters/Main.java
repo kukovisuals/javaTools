@@ -28,7 +28,7 @@ public class Main {
 			ch[i] = rows[i].charAt(right);
 			if (ch[i] == '#') {
 				output ++;
-			}
+			} 
 			// System.out.println(ch[i] + ", "+ right+" size: "+len);
 			right += 3;	
 		}
